@@ -1,0 +1,10 @@
+.image-slot {
+  background-color: #111;
+  background-image: var(--owner-image);
+  background-position: center;
+  background-size: cover;
+}
+
+html[data-theme='light'] .image-slot {
+  background-color: #e3e0d9;
+}
