@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './appearance-overrides.css';
+import './publication-upgrades.css';
 import { Header, Footer } from '@/components/chrome';
 import { SitePersonalizer } from '@/components/personalization';
 
