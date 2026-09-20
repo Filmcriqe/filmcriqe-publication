@@ -1,0 +1,4 @@
+import Link from 'next/link'; import { Entry, labels } from '@/lib/content';
+export function ImageSlot({label='Editorial photography — upload in Media'}:{label?:string}){return <div className="image-slot"><span>{label}</span></div>}
+export function Card({entry}:{entry:Entry}){const href=entry.type==='review'?`/reviews/${entry.slug}`:entry.type==='hidden-gem'?`/hidden-gems/${entry.slug}`:`/${entry.type}s/${entry.slug}`;return <article className="card"><ImageSlot /><div className="eyebrow">{labels[entry.type]}</div><h2><Link href={href}>{entry.title}</Link></h2><p>{entry.dek}</p><div className="metadata">{entry.year || entry.date}{entry.score?` · SceneScore ${entry.score}`:''}</div></article>}
+export function StarRating({value=4.5}:{value?:number}){const full=Math.round(value); return <span className="stars" aria-label={`${value} out of 5 stars`}>{'★'.repeat(full)}{'☆'.repeat(5-full)}</span>}

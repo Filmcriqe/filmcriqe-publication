@@ -1,0 +1,1 @@
+import { byType } from '@/lib/content'; import { Archive } from '@/components/archive'; export default function Features(){return <Archive title="Features" intro="Conversations, craft, and the people who make cinema matter." items={byType('feature')}/>}

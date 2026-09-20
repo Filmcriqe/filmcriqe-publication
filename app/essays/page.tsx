@@ -1,0 +1,1 @@
+import { byType } from '@/lib/content'; import { Archive } from '@/components/archive'; export default function Essays(){return <Archive title="Essays" intro="Long-form reflections on images, memory, and the art of attention." items={byType('essay')}/>}

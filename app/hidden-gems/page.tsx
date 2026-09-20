@@ -1,0 +1,1 @@
+import { entries } from '@/lib/content'; import { Archive } from '@/components/archive'; export default function Gems(){return <Archive title="Hidden Gems" intro="Great films aren’t always the most popular." items={entries.filter(x=>x.hidden)}/>}
