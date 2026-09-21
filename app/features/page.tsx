@@ -1,1 +1,1 @@
-import { byType } from '@/lib/content'; import { Archive } from '@/components/archive'; export default function Features(){return <Archive title="Features" intro="Conversations, craft, and the people who make cinema matter." items={byType('feature')}/>}
+import { Archive } from '@/components/archive'; import { publishedByType } from '@/lib/publication-data'; export default async function Features(){return <Archive title="Features" intro="Conversations, craft, and the people who make cinema matter." items={await publishedByType('feature')}/>}

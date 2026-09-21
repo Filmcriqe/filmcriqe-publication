@@ -1,11 +1,7 @@
 'use client';
 
 import { CSSProperties, useEffect, useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
-
-const url=process.env.NEXT_PUBLIC_SUPABASE_URL;
-const key=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const db=url&&key?createClient(url,key):null;
+import { supabaseBrowser as db } from '@/lib/supabase-browser';
 
 export function EditorialImageSlot({slot,label='Add photograph',className='',src,alt,focalPoint='center'}:{slot:string;label?:string;className?:string;src?:string;alt?:string;focalPoint?:string}){
   const [managed,setManaged]=useState<Record<string,string>>({});

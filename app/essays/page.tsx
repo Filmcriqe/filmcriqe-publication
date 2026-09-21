@@ -1,1 +1,1 @@
-import { byType } from '@/lib/content'; import { Archive } from '@/components/archive'; export default function Essays(){return <Archive title="Essays" intro="Long-form reflections on images, memory, and the art of attention." items={byType('essay')}/>}
+import { Archive } from '@/components/archive'; import { publishedByType } from '@/lib/publication-data'; export default async function Essays(){return <Archive title="Essays" intro="Long-form reflections on images, memory, and the art of attention." items={await publishedByType('essay')}/>}
